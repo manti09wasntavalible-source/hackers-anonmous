@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Welcome to the Chat Website</h1>
+  <nav>
+    <a href="/account/signinup">Sign In / Sign Up</a> |
+    <a href="/account/">Account</a> |
+    <a href="/public/">Public Chatroom</a>
+  </nav>
+  {% if logged_in %}
+    <form action="/account/delete" method="get">
+      <button type="submit">Sign Out</button>
+    </form>
+  {% endif %}
+  <form>
+    <input type="text" placeholder="Search chatrooms (not yet functional)">
+    <button type="submit">Search</button>
+  </form>
+</body>
+</html>
