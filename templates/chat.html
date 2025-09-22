@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ roomname }} Chatroom</title></head>
+<body>
+  <h2>{{ roomname.capitalize() }} Chatroom</h2>
+  <p>You are logged in as: <b>{{ username }}</b></p>
+  <form method="post">
+    <input name="message" placeholder="Type a message">
+    <button type="submit">Send</button>
+  </form>
+  <div>
+    {% for ts, user, text in messages %}
+      <p>
+        <img src="/pfp/{{user}}.jpg" alt="pfp" width="30" height="30" onerror="this.style.display='none'">
+        <b>[{{ ts }}] {{ user }}:</b> {{ text }}
+      </p>
+    {% endfor %}
+  </div>
+  <p><a href="/">Home</a></p>
+</body>
+</html>
