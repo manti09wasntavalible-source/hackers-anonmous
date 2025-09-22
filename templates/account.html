@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Account</title></head>
+<body>
+  <h2>Account: {{ username }}</h2>
+  <form action="/account/delete">
+    <button type="submit">Delete Account</button>
+  </form>
+  <form action="/account/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="pfp" accept=".jpg">
+    <button type="submit">Upload Profile Picture</button>
+  </form>
+  <p><a href="/">Home</a></p>
+</body>
+</html>
